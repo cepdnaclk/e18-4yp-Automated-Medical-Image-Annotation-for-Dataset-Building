@@ -3,8 +3,8 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-4yp-project-template
-title:
+repository-name: e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building
+title: Automated Medical Image Annotation for Dataset Building
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
@@ -13,14 +13,14 @@ title:
 
 #### Team
 
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
+- E/18/366, Thulasiyan Y., [email](mailto:e18366@eng.pdn.ac.lk)
+- E/18/340, Vithurshini S., [email](mailto:e18340@eng.pdn.ac.lk)
+- E/18/245, Nishani K., [email](mailto:e18245@eng.pdn.ac.lk)
 
 #### Supervisors
 
-- Name, [email](mailto:name@eng.pdn.ac.lk)
-- Name, [email](mailto:name@eng.pdn.ac.lk)
+- Devindi G.A.I, [email](mailto:e17058@eng.pdn.ac.lk)
+- Liyanage S.N, [email](mailto:e17190@eng.pdn.ac.lk)
 
 #### Table of content
 
