@@ -19,6 +19,8 @@ title: Automated Medical Image Annotation for Dataset Building
 
 #### Supervisors
 
+- Prof. Roshan G. Ragel, [email](mailto:roshanr@eng.pdn.ac.lk)
+- Dr. Isuru Nawinne, , [email](mailto:isurunawinne@eng.pdn.ac.lk)
 - Devindi G.A.I, [email](mailto:e17058@eng.pdn.ac.lk)
 - Liyanage S.N, [email](mailto:e17190@eng.pdn.ac.lk)
 
