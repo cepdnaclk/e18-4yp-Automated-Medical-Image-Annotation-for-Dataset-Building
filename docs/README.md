@@ -13,9 +13,10 @@ title: Automated Medical Image Annotation for Dataset Building
 
 #### Team
 
-- E/18/366, Thulasiyan Y., [email](mailto:e18366@eng.pdn.ac.lk)
-- E/18/340, Vithurshini S., [email](mailto:e18340@eng.pdn.ac.lk)
 - E/18/245, Nishani K., [email](mailto:e18245@eng.pdn.ac.lk)
+- E/18/340, Vithurshini S., [email](mailto:e18340@eng.pdn.ac.lk)
+- E/18/366, Thulasiyan Y., [email](mailto:e18366@eng.pdn.ac.lk)
+
 
 #### Supervisors
 
@@ -45,6 +46,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 
 ## Abstract
+Medical image annotation to build datasets leverages in many clinical applications such as diagnosis and treatment planning. Automated medical image annotation shows an efficient solution over manual annotation in dataset building. In this work, we focus on automated user-interactive oral image annotation that could perform automated annotations with assistance of user prompts such as text,points and bounding boxes. Meta AI’s Segment Anything Model (SAM) , a vision foundation model trained on the largest segmentation dataset for interactive promptable segmentation with impressive zero-shot performance has increased the potential for medical image segmentation. However, SAM shows limited performance with the images that differ from the trained dataset or images with challenging conditions like irregular regions and boundaries and text-to-mask task seems exploratory.
+
+In this work, we explore a comprehensive study on automating oral image annotation and related work using the foundation models such as SAM, Dino, Grounding Dino,Grounded SAM addressing the above limitations. At the end, we discuss the potential research gaps in automating medical image annotation and propose our methodology to address the identified gaps.
 
 ## Related works
 
