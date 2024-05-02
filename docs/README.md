@@ -78,6 +78,76 @@ Grounding DINO
 ![image](https://github.com/vithurshiniS/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/939791ae-7f67-4c2c-815c-3361f33b6779)
 
 ## Results and Analysis
+### MedSAM Results
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/802bbc32-5e73-43cc-8c07-bcef0d72181e)
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/f6c93172-4523-4f38-93e7-6f7b08339b72)
+
+### MedSAM Finetune (Flare 22 CT dataset)
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/d7e28671-758e-414a-b68c-dba95218d921)
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/298e5b6c-6bf4-422d-9b03-bff948a381ea)
+
+### MedSAM Finetune (Tufts Teeth dataset with training)
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/c85c4dae-6a9e-4d04-9f84-6491ad242510)
+
+### MedSAM Finetune (Tufts Teeth dataset with validation)
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/b64bba08-6a32-4545-a35e-0720ad6c7e55)
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/092909c1-9d55-4d37-a691-e6e2d8f7fe83)
+
+### Few-shot keypoint detection Results
+
+Episodic Attention Maps
+
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/decc59ec-19ef-45dc-b8e8-294bdb3cf1ef)
+
+Support Images
+
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/c823ef59-bc52-4c96-8396-cd96ee18b1de)
+
+Query
+
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/7bd5de4f-26e7-4b89-9921-0c1e059d7dea)
+
+Query Prediction
+
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/15b142b9-052d-4332-9873-125265a89419)
+
+### UniverSeg Results
+![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/a6ce0bec-29e6-48b5-9a27-0aa4c2871ecf)
+
+Increasing the support set size improves the Dice score evaluation of the prediction.
+
+### Visualizations
+1) WBC dataset
+   Support set samples
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/c49f3fc1-5ebf-4860-a6b2-9aa76242539b)
+
+   Test Predictions for varying Support Set Size N
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/4fc4efc1-e2e7-4778-97e9-bacd49660c9f)
+
+3) OASIS dataset
+   Support set samples
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/eec45461-5d3e-4cda-a4a1-839c63d4c8aa)
+
+5) Tufts dataset
+   Support set samples
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/7d12abab-2ec0-430e-87fa-4d710b634b1f)
+
+   Test Predictions for varying Support Set Size N
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/76f630cd-1c03-45f3-a0d6-85857ae7fddc)
+
+6) ISIC2018 dataset
+   Support set samples
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/3e7dfbc6-789a-4fdb-b22e-8292edb990f0)
+
+   Test Predictions for varying Support Set Size N
+   
+   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/b7613cb5-cb23-4339-b40c-6d019ddecfbb)
 
 ## Conclusion
 
