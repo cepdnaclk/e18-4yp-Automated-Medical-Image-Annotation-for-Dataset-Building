@@ -9,152 +9,66 @@ title: Automated Medical Image Annotation for Dataset Building
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Automated Medical Image Annotation for Dataset Building
+# A Comparative Study on Generalized Automated Medical Image Segmentation for Dataset Building
 
 #### Table of content
 
-1. [Abstract](#abstract)
-2. [Related works](#related-works)
-3. [Pipeline](#pipeline)
-4. [Results and Analysis](#results-and-analysis)
-5. [Conclusion](#conclusion)
-6. [Publications](#publications)
-7. [Links](#links)
+1. [Introduction](#introduction)
+2. [Approach](#approach)
+3. [Results and Analysis](#results-and-analysis)
+4. [Conclusion](#conclusion)
+5. [Publications](#publications)
+6. [Links](#links)
 
 ---
 
-## Abstract
-Medical image annotation to build datasets leverages in many clinical applications such as diagnosis and treatment planning. Automated medical image annotation shows an efficient solution over manual annotation in dataset building. In this work, we focus on automated user-interactive oral image annotation that could perform automated annotations with assistance of user prompts such as text,points and bounding boxes. Meta AI’s Segment Anything Model (SAM) , a vision foundation model trained on the largest segmentation dataset for interactive promptable segmentation with impressive zero-shot performance has increased the potential for medical image segmentation. However, SAM shows limited performance with the images that differ from the trained dataset or images with challenging conditions like irregular regions and boundaries and text-to-mask task seems exploratory.
+## Introduction
+Medical image annotation plays a crucial role in building datasets for clinical applications, such as diagnosis, treatment planning, and research. However, the manual annotation process is labor-intensive, time-consuming, costly, and prone to human error, requiring trained experts to handle complex anatomical structures with low contrast, overlapping or blurry boundaries, and irregular regions of interest (ROI). These challenges necessitate the development of automated solutions to enhance the efficiency and scalability of medical image annotation.
 
-In this work, we explore a comprehensive study on automating oral image annotation and related work using the foundation models such as SAM, Dino, Grounding Dino,Grounded SAM addressing the above limitations. At the end, we discuss the potential research gaps in automating medical image annotation and propose our methodology to address the identified gaps.
+Traditional deep learning models, while effective, often require retraining or fine-tuning for novel annotation tasks, which is not feasible for clinical annotators due to the time and expertise required. To address these limitations, few-shot learning approaches have gained popularity for their ability to generalize to unseen annotation tasks involving new anatomies and image modalities using only a limited number of image-label pairs, without the need for additional retraining.
 
-## Related works
-### Object Detection Foundation model 
-Grounding DINO
-- State-of-the-art zero-shot object-set detection model.
-- Support (image,text) input.
-- Trained on natural images.
-  
-![image](https://github.com/vithurshiniS/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/1c17c7f1-18f7-4d9d-839e-668ea2c582de)
+In this work, we comprehensively study the generalizability of state-of-the-art few-shot learning segmentation models for medical images, evaluating their performance across diverse medical datasets and identifying their limitations. Our research aims to identify effective models for generalized automated medical image segmentation, focusing on region annotations (segmentation). By using a small set of support images as references for unseen tasks, these models can automate the annotation process, significantly improving the efficiency and accuracy of medical image annotation, thus supporting various clinical applications more effectively.
 
-### Object Segmentation Foundation model 
-1) SAM
-- A promptable segmentation foundation model
-- Support points,box,text annotation input.
-- Trained on natural images.
-- Leverages zero-shot generalization capability to unseen image distributions and tasks
+## Approach
+### Automated Annotation
+![image](https://github.com/user-attachments/assets/8b00402e-ea8f-4b57-be67-f35d9cb95cfe)
 
-![image](https://github.com/vithurshiniS/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/565cc65c-88fb-44f2-a2fa-3c0ce32888b7)
+### Research Objectives
+There is need of consistent performance across diverse data & complex domain shifts, No re-training & fine-tuning required for new unseen tasks which saves time & resources, Clinical researchers do not need any expertise.
+* Focus on Comparative Study of Generalizable Models for Medical Image Segmentation without re-training or fine-tuning.
+* Provide an overview of advantages of Generalizable Models to build a automated medical image annotation system.
+![image](https://github.com/user-attachments/assets/8eba089e-5226-4721-bd83-cae270a1aab2)
 
-2) MedSAM
-- Based on SAM model specified for medical images
-
-### Models used for Detection and Segmentation
-1) Grounded-SAM
-- Combines Grounding DINO and SAM : detect and segment anything with text.
-- Integrates object detection and segmentation for open-vocabulary tasks for natural images.
-  
-2) TongueSAM
-- Integrates object detection and segmentation for open-vocabulary tasks for natural images.
-- Trained only for specific task.
-
-![image](https://github.com/vithurshiniS/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/6675638c-b1c1-4dd3-82ac-dff5ba190e35)
-
-### Few-shot paradigm
-- Aimed at learning from limited labeled data.
-- Leverages the existing knowledge to learn new tasks efficiently. 
-
-### Few-shot keypoint detection
-- Predict the keypoints with uncertainty in a query image given the support keypoints.
-- N-way-K-shot detection. N: support keypoints K: support images
-
-### Few-shot Segmentation
-1) UniverSeg :  Universal Medical Image Segmentation
-- Enables solving new segmentation tasks without retraining.
-- A novel flexible CrossBlock mechanism that transfers information from the example set to the new image.
-- Tasks are dynamically assigned during inference. 
-
-## Pipeline
-![image](https://github.com/vithurshiniS/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/939791ae-7f67-4c2c-815c-3361f33b6779)
 
 ## Results and Analysis
-### MedSAM Results
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/802bbc32-5e73-43cc-8c07-bcef0d72181e)
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/f6c93172-4523-4f38-93e7-6f7b08339b72)
 
-### MedSAM Finetune (Flare 22 CT dataset)
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/d7e28671-758e-414a-b68c-dba95218d921)
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/298e5b6c-6bf4-422d-9b03-bff948a381ea)
+![image](https://github.com/user-attachments/assets/5f7f5d16-c4aa-4caf-80a4-9f3b5b882790)
 
-### MedSAM Finetune (Tufts Teeth dataset with training)
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/c85c4dae-6a9e-4d04-9f84-6491ad242510)
+In one-shot setting, SegGPT & PerSAM show the high performance where UniverSeg & Painter lag behind. In few-shot setting, UniverSeg followed by SegGPT show high performance. This shows the potential for improvement of model's performance with more support samples. 
 
-### MedSAM Finetune (Tufts Teeth dataset with validation)
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/b64bba08-6a32-4545-a35e-0720ad6c7e55)
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/092909c1-9d55-4d37-a691-e6e2d8f7fe83)
+![image](https://github.com/user-attachments/assets/4b8fde73-8573-4d29-b265-1c9ab5aa0fe6)
 
-### Few-shot keypoint detection Results
 
-Episodic Attention Maps
+![image](https://github.com/user-attachments/assets/5c85061d-a734-41c9-860a-d2202fec6391)
 
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/decc59ec-19ef-45dc-b8e8-294bdb3cf1ef)
+Increasing the support set size improves the average dice score evaluation of the prediction across different medical image modalities.
 
-Support Images
+![image](https://github.com/user-attachments/assets/4650ee65-8624-4f1b-b919-305bade7d916)
 
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/c823ef59-bc52-4c96-8396-cd96ee18b1de)
-
-Query
-
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/7bd5de4f-26e7-4b89-9921-0c1e059d7dea)
-
-Query Prediction
-
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/15b142b9-052d-4332-9873-125265a89419)
-
-### UniverSeg Results
-![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/a6ce0bec-29e6-48b5-9a27-0aa4c2871ecf)
-
-Increasing the support set size improves the Dice score evaluation of the prediction.
-
-### Visualizations
-1) WBC dataset
-   Support set samples
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/c49f3fc1-5ebf-4860-a6b2-9aa76242539b)
-
-   Test Predictions for varying Support Set Size N
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/4fc4efc1-e2e7-4778-97e9-bacd49660c9f)
-
-3) OASIS dataset
-   Support set samples
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/eec45461-5d3e-4cda-a4a1-839c63d4c8aa)
-
-5) Tufts dataset
-   Support set samples
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/7d12abab-2ec0-430e-87fa-4d710b634b1f)
-
-   Test Predictions for varying Support Set Size N
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/76f630cd-1c03-45f3-a0d6-85857ae7fddc)
-
-6) ISIC2018 dataset
-   Support set samples
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/3e7dfbc6-789a-4fdb-b22e-8292edb990f0)
-
-   Test Predictions for varying Support Set Size N
-   
-   ![image](https://github.com/cepdnaclk/e18-4yp-Automated-Medical-Image-Annotation-for-Dataset-Building/assets/95094083/b7613cb5-cb23-4339-b40c-6d019ddecfbb)
+These visual representations of few-shot baselines UniverSeg & SegGPT on the diverse medical image modalities hold evidence for the improvement of prediction performance with the increase of support size by which the predictions closely match the ground truth masks. 
 
 ## Conclusion
+
+This work investigates approaches for adapting to new, unseen segmentation tasks by experts without the need for model retraining and fine-tuning on large datasets. The choice of a segmentation model for specific medical image applications depends on the characteristics of the dataset and the required performance level. Our analysis highlights that foundational models like SAM, MedSAM, and Grounding Dino, which are trained on natural image domains, often fall short in medical image segmentation due to domain-specific complexities that these models do not inherently address.
+
+From the comparative results, it is evident that few-shot learning approaches offer a viable solution for medical image segmentation tasks, as they can predict labels without extensive retraining and fine-tuning, even when data is limited. 
+
+Overall, this analysis underscores the efficacy of few-shot learning models in medical image segmentation, particularly for applications requiring rapid adaptation to new tasks without the overhead of retraining. These findings support the broader conclusion that few-shot learning approaches are well-suited for generalizing across unseen image modalities in a single pass during inference, offering a practical and efficient solution for medical image annotation challenges. This adaptability makes few-shot learning models a valuable tool in clinical settings where new and varied segmentation tasks frequently arise.
 
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
 
-<!-- 1. [Semester 7 report](./) -->
+ 1. [Final Presentation Slides](https://docs.google.com/presentation/d/1qMW0ntk3r72oQNNPejfo2Oda9H3w-_hmxwdWZx57jaI/edit?usp=sharing) 
 <!-- 2. [Semester 7 slides](./) -->
 <!-- 3. [Semester 8 report](./) -->
 <!-- 4. [Semester 8 slides](./) -->
