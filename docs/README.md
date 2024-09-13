@@ -31,7 +31,7 @@ In this work, we comprehensively study the generalizability of state-of-the-art 
 
 ## Approach
 ### Automated Annotation
-![image](https://github.com/user-attachments/assets/8b00402e-ea8f-4b57-be67-f35d9cb95cfe)
+<img src="https://github.com/user-attachments/assets/8b00402e-ea8f-4b57-be67-f35d9cb95cfe" width="10" />
 
 ### Research Objectives
 There is need of consistent performance across diverse data & complex domain shifts, No re-training & fine-tuning required for new unseen tasks which saves time & resources, Clinical researchers do not need any expertise.
